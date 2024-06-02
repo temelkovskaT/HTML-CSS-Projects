@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
 
 :root {
-  --main-color: #deab5f;
+  --main-color: #f3b354;
   --primary-color: #312e2e;
+  --bg-color: #180f05;
 }
 
 /* Utility Styles */
@@ -24,7 +25,7 @@ button:hover {
 }
 
 body {
-  background-color: #100e0f;
+  background-color: var(--bg-color);
 }
 
 /* Nav start */
@@ -32,9 +33,11 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #fff;
+  color: #c5c5c5;
   font-family: sans-serif;
-  padding-top: 15px;
+  padding: 15px 0;
+  height: 4rem;
+  background: #000;
 }
 
 nav ul li {
@@ -43,7 +46,7 @@ nav ul li {
 }
 
 nav a {
-  color: #fff;
+  color: #c5c5c5;
   text-decoration: none;
   margin-left: 40px;
   padding-bottom: 2px;
@@ -52,11 +55,30 @@ nav a {
 nav a:hover {
   border-bottom: 2px solid var(--main-color);
 }
+
+nav .burger {
+  display: none;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 4px;
+  background-color: #c5c5c5;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
 /* Nav end */
 
 /* Header start */
 .header {
-  background: url(/Images/pexels-nao-triponez-129207.jpg);
+  /* background: url(/Images/pexels-nao-triponez-129207.jpg); */
+  background: url("/Images/coffee.gif");
+  filter: brightness(80%);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -90,9 +112,11 @@ nav a:hover {
 .main-btn {
   position: absolute;
   bottom: 2rem;
-  margin-top: 20px;
+  margin-top: 2rem;
   background: var(--main-color);
   transform: translateY(60px);
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 /* End header */
 
@@ -157,6 +181,20 @@ nav a:hover {
   background: url(/Images/2.png);
   background-position: center;
   background-size: cover;
+}
+
+.img,
+.img-two,
+.card-img.img-one,
+.card-img.img-three {
+  transition: all linear 0.2s;
+}
+
+.img:hover,
+.img-two:hover,
+.card-img.img-one:hover,
+.card-img.img-three:hover {
+  transform: rotate(45deg);
 }
 
 .title-two {
@@ -242,13 +280,15 @@ nav a:hover {
 footer {
   height: 50vh;
   margin-top: 60px;
+  padding-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   justify-content: center;
   color: #fff;
   font-family: sans-serif;
-  border-top: 2px solid #565656;
+  /* border-top: 2px solid #232323; */
+  background: #000;
   /* border: 1px solid red; */
 }
 
@@ -289,9 +329,26 @@ hr {
 /* responsiveness */
 
 @media only screen and (max-width: 768px) {
+  nav li a {
+    display: none;
+  }
+  nav .burger {
+    display: inline-block;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  .logo {
+    margin-left: 2rem;
+  }
+
   .main-heading,
   .primary-heading {
     font-size: 2.5rem;
+  }
+
+  .main-btn {
+    font-size: 1rem;
   }
   #our-story {
     text-align: center;
@@ -306,14 +363,15 @@ hr {
   }
   #our-story .img-container {
     width: 80%;
-
+    /* border: 1px solid red; */
     margin: 0 auto;
-    transform: translateX(100px);
+    transform: translateX(-20px);
   }
 
   .coffee-container .img-container {
     margin-top: 5rem;
     width: 50%;
+    transform: translateX(20px);
   }
 
   .title {
@@ -331,5 +389,9 @@ hr {
     text-align: center;
     margin-bottom: 100px;
     transform: translateX(-80px);
+  }
+
+  footer {
+    height: 100vh;
   }
 }

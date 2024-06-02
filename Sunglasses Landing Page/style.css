@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #5800bc;
+  --accent: #7bbf06;
+
+  --dark-grey: #1f1e1e;
+  --item-bg: #ebf1f0;
+  --main-font: "Playfair Display", serif;
+  --primary-font: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(255, 255, 255), white);
+}
+/* nav start */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-family: var(--main-font);
+  font-weight: bold;
+  background: var(--dark-grey);
+  color: #fff;
+}
+
+.logo {
+  margin-left: 5rem;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 5rem;
+}
+
+.burger span {
+  border: 2px solid #fff;
+  width: 40px;
+  height: 1px;
+  margin: 2px;
+}
+/* nav end */
+
+/* header start */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+  margin-right: 0;
+  /* border: 1px red solid; */
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /* margin-left: 6rem; */
+  margin: 3rem 0 3rem 6rem;
+}
+.main-headings {
+  /* border: 1px red solid; */
+  font-size: 4rem;
+  font-family: var(--main-font);
+  transform: translateY(-40px);
+  color: #000;
+  line-height: 5rem;
+}
+
+.bg-accent {
+  color: var(--accent);
+}
+
+.primary-headings {
+  max-width: 450px;
+  font-family: var(--primary-font);
+  line-height: 25px;
+  margin-bottom: 1rem;
+  color: var(--dark-grey);
+}
+
+.btn-fill {
+  background-color: var(--main-color);
+  color: #fff;
+  border: transparent solid 1px;
+  padding: 12px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.btn-fill:hover {
+  background: #fff;
+  border: var(--main-color) solid 1px;
+  color: var(--main-color);
+}
+
+.btn-outline.active {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.btn-outline.active:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+header .img-container {
+  /* border: 1px solid red; */
+  width: 50vw;
+  height: 90vh;
+}
+
+.header-img {
+  background: url("/Images/header-cover.jpg");
+  background-position: center;
+  background-size: cover;
+
+  /* width: 100%; */
+  /* width: 50%; */
+}
+
+/* header end */
+
+/* section-one start */
+.section-one {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 7rem; */
+}
+.section-one .section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 3rem 6rem 3rem 0;
+}
+
+.section-one .img-container {
+  /* border: 1px solid red; */
+  width: 50vw;
+  height: 90vh;
+}
+
+.section-img {
+  background: url("/Images/matthew-cabret-9Z_bNTvBiqM-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  /* width: 100%; */
+}
+/* section-one end */
+
+/* products start */
+.divider {
+  display: none;
+  height: 2rem;
+  background-color: var(--dark-grey);
+}
+.products {
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.products-heading {
+  font-family: var(--primary-font);
+  font-size: 3rem;
+}
+
+.product-categories {
+  margin-top: 4rem;
+}
+.product-categories button {
+  margin-right: 20px;
+}
+
+.products .product-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  max-width: 60rem;
+}
+
+.products .item {
+  margin: 20px;
+  transition: all ease-in 0.2s;
+}
+
+.products .item:hover {
+  transform: scale(1.1);
+
+  cursor: pointer;
+}
+.products .product-items-container .img-container {
+  margin: 0 auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  width: 250px;
+  height: 300px;
+}
+.products .img-container.img1 {
+  background: url("/Images/products/matthew-reyes-Y3QjrFDt1lo-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.products .img-container.img2 {
+  background: url("/Images/products/farah-samy-xU69-CkS67E-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.products .img-container.img3 {
+  background: url("/Images/products/florencia-simonini-kOGPvmvYVIs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.products .img-container.img4 {
+  background: url("/Images/products/jose-pinto-BGZRtMrwfa0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.products .img-container.img5 {
+  background: url("/Images/products/kiran-ck-lSl94SZHRgA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.products .img-container.img6 {
+  background: url("/Images/products/apostolos-vamvouras-YpFxVLye8bo-unsplash\(1\).jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.products .product-items-container .item .item-name {
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
+.products .product-items-container .item .item-price {
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+}
+.products .product-items-container .item .view-product {
+  text-decoration: none;
+  font-family: var(--primary-font);
+  margin-bottom: 10px;
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+/* products end */
+
+/* customer reviews start */
+.customer-reviews {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.customer-heading {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.customer {
+  text-align: center;
+  font-family: var(--primary-font);
+}
+
+.customer-reviews .customer-description {
+  font-size: 1rem;
+  margin-top: 20px;
+  max-width: 300px;
+  text-align: center;
+  font-family: var(--primary-font);
+}
+
+.customer .customer-img .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.customer .img-one {
+  background: url("/Images/yogendra-singh-uWs_N5Dlyiw-unsplash.jpg");
+}
+.customer .img-two {
+  background: url("/Images/joshua-rondeau-xazIYnxpS2Q-unsplash.jpg");
+}
+.customer .img-three {
+  background: url("/Images/milan-popovic-kOnmHdLJTNI-unsplash.jpg");
+}
+
+/* customer reviews end */
+
+/* footer start */
+footer {
+  height: 50vh;
+  margin-top: 6rem;
+  color: var(--item-bg);
+  background: var(--dark-grey);
+  font-family: var(--primary-font);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .container .footer-heading {
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+footer .footer-primary-heading {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+/* footer end */
+/* PROJECT END */
+
+/* @media only screen and (max-width: 1191px) {
+  .left-container {
+    
+    margin-top: 3rem;
+  }
+
+  header .img-container {
+    width: 40vw;
+  }
+} */
+
+@media only screen and (max-width: 1100px) {
+  header,
+  .section-one {
+    text-align: center;
+    height: 120vh;
+    margin-bottom: 20rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-container,
+  .section-one .section-content {
+    text-align: center;
+    margin: 2rem 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .img-container,
+  .section-one .img-container {
+    width: 100%;
+  }
+
+  .header-img {
+    margin-top: 2rem;
+    width: 100vw;
+  }
+
+  .section-one .section-content {
+    margin-right: 0;
+  }
+
+  .main-headings {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  .primary-headings {
+    width: 400px;
+  }
+  .left-container {
+    margin-top: 8rem;
+  }
+}
