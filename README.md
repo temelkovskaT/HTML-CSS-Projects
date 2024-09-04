@@ -13,7 +13,7 @@ I added some personal tweaks and styles to further improve my skills, including 
 ## theArt
 
 - Art themed page
-- I added some js script to shuffle the images
+- I added some javascript to shuffle the images
 - Link to video of page: https://1drv.ms/v/c/3b4c072dee4a2482/EYbL7qlah-VKkmJ-5RBOrn8BpF9cwqC4Y45GrL305-J97g?e=hepFPg
 
 ![Screenshot 2024-06-02 at 21-47-04 theArt-1](https://github.com/temelkovskaT/HTML-CSS-Projects/assets/85082180/3ee6dc06-8201-4864-92d3-9f9176a6dfb5)
